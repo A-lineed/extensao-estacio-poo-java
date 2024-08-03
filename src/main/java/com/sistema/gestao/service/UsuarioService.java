@@ -31,4 +31,19 @@ public class UsuarioService implements UserDetailsService {
                 .roles(usuario.getPapel())
                 .build();
     }
+
+	public Object listarTodos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Usuario encontrarPorId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void deletar(Long id) {
+		// TODO Auto-generated method stub
+		
+	}
 }
