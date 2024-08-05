@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Pedidos</title>
+<link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+	<h1>Lista de Pedidos</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Cliente</th>
+				<th>Descrição</th>
+				<th>Quantidade</th>
+				<th>Data de Criação</th>
+				<th>Data de Entrega</th>
+				<th>Status</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="pedido : ${pedidos}">
+				<td th:text="${pedido.cliente.nome}"></td>
+				<td th:text="${pedido.descricao}"></td>
+				<td th:text="${pedido.quantidade}"></td>
+				<td th:text="${pedido.dataCriacao}"></td>
+				<td th:text="${pedido.dataEntrega}"></td>
+				<td th:text="${pedido.status}"></td>
+				<td><a th:href="@{/pedidos/editar/{id}(id=${pedido.id})}">Editar</a>
+					<a th:href="@{/pedidos/deletar/{id}(id=${pedido.id})}">Deletar</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<a href="/pedidos/novo">Novo Pedido</a>
+</body>
+</html>

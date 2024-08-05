@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/clientes">Clientes</a></li>
+                <li><a href="/pedidos">Pedidos</a></li>
+                <li><a href="/producao">Produção</a></li>
+                <li><a href="/relatorios">Relatórios</a></li>
+                <li><a href="/usuarios">Usuários</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h1>Lista de Clientes</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF/CNPJ</th>
+                        <th>Endereço</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="cliente : ${clientes}">
+                        <td th:text="${cliente.nome}"></td>
+                        <td th:text="${cliente.cpfCnpj}"></td>
+                        <td th:text="${cliente.endereco}"></td>
+                        <td th:text="${cliente.telefone}"></td>
+                        <td th:text="${cliente.email}"></td>
+                        <td>
+                            <a class="button edit" th:href="@{/clientes/editar/{id}(id=${cliente.id})}">Editar</a>
+                            <a class="button delete" th:href="@{/clientes/deletar/{id}(id=${cliente.id})}">Deletar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="button new" href="/clientes/novo">Novo Cliente</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Gestão. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

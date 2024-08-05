@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #87457f;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.dashboard h1 {
+    margin-bottom: 2rem;
+    color: #87457f;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 250px;
+    text-align: left;
+}
+
+.card h2 {
+    color: #87457f;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0;
+    background: #87457f;
+    color: #87457f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #87457f;
+}
+
+footer {
+    background: #87457f;
+    color: #87457f;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estiliza a logo */
+.logo {
+    height: 100px;
+    margin-right: 50px; 
+    vertical-align: middle;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #008dcc; 
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #87457f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.content h1 {
+    margin-bottom: 2rem;
+    color: #87457f;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #87457f;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #87457f;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+.button.edit {
+    background-color: #0000FF;
+}
+
+.button.delete {
+    background-color: #FF0000; 
+}
+
+.button.new {
+    background-color: #87457f;
+    padding: 0.5rem 2rem;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background: #008dcc;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
