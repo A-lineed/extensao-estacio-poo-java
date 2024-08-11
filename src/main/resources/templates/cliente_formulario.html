@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Cadastro de Cliente</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}">
+    <meta charset="UTF-8">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
-	<h1>Cadastro de Cliente</h1>
-	<form th:action="@{/clientes}" th:object="${cliente}" method="post">
-		<div>
-			<label>Nome:</label> <input type="text" th:field="*{nome}" />
-			<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}">Nome
-				é obrigatório</div>
-		</div>
-		<div>
-			<label>CPF/CNPJ:</label> <input type="text" th:field="*{cpfCnpj}" />
-			<div th:if="${#fields.hasErrors('cpfCnpj')}" th:errors="*{cpfCnpj}">CPF/CNPJ
-				é obrigatório</div>
-		</div>
-		<div>
-			<label>Endereço:</label> <input type="text" th:field="*{endereco}" />
-			<div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}">Endereço
-				é obrigatório</div>
-		</div>
-		<div>
-			<label>Telefone:</label> <input type="text" th:field="*{telefone}" />
-			<div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}">Telefone
-				é obrigatório</div>
-		</div>
-		<div>
-			<label>Email:</label> <input type="email" th:field="*{email}" />
-			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email
-				é obrigatório</div>
-		</div>
-		<div>
-			<button type="submit">Salvar</button>
-		</div>
-	</form>
-	<a href="/clientes">Voltar</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pedidos">Pedidos</a></li>
+                <li><a href="/producao">Produção</a></li>
+                <li><a href="/relatorios">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="dashboard">
+            <h1>Cadastro de Cliente</h1>
+            <form th:action="@{/clientes}" th:object="${cliente}" method="post">
+                <div>
+                    <label>Nome:</label>
+                    <input type="text" th:field="*{nome}" />
+                    <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}">Nome é obrigatório</div>
+                </div>
+                <div>
+                    <label>CPF/CNPJ:</label>
+                    <input type="text" th:field="*{cpfCnpj}" />
+                    <div th:if="${#fields.hasErrors('cpfCnpj')}" th:errors="*{cpfCnpj}">CPF/CNPJ é obrigatório</div>
+                </div>
+                <div>
+                    <label>Endereço:</label>
+                    <input type="text" th:field="*{endereco}" />
+                    <div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}">Endereço é obrigatório</div>
+                </div>
+                <div>
+                    <label>Telefone:</label>
+                    <input type="text" th:field="*{telefone}" />
+                    <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}">Telefone é obrigatório</div>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" th:field="*{email}" />
+                    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email é obrigatório</div>
+                </div>
+                <div>
+                    <button type="submit" class="button">Salvar</button>
+                </div>
+            </form>
+            <a href="/clientes" class="button">Voltar</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Gestão. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

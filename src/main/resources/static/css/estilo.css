@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #87457f;
+    background: #008dcc; /* Azul claro */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
@@ -22,7 +22,6 @@ header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    color: #ffffff;
 }
 
 header nav ul li {
@@ -46,169 +45,74 @@ main {
 
 .dashboard h1 {
     margin-bottom: 2rem;
-    color: #87457f;
+    color: #87457f; /* Roxo escuro */
 }
 
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.card {
+.form {
+    max-width: 600px;
+    margin: 0 auto;
     background: #fff;
-    border: 1px solid #ddd;
+    padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    width: 250px;
-    text-align: left;
 }
 
-.card h2 {
-    color: #87457f;
-    margin-bottom: 1rem;
-}
-
-.card p {
+.form-group {
     margin-bottom: 1.5rem;
-}
-
-.button {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 0.75rem 0;
-    background: #87457f;
-    color: #87457f;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #87457f;
-}
-
-footer {
-    background: #87457f;
-    color: #87457f;
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Estiliza a logo */
-.logo {
-    height: 100px;
-    margin-right: 50px; 
-    vertical-align: middle;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background: #008dcc; 
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: #87457f;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 2rem;
-    text-align: center;
-}
-
-.content h1 {
-    margin-bottom: 2rem;
-    color: #87457f;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 1rem;
     text-align: left;
 }
 
-th {
-    background-color: #87457f;
-    color: white;
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #87457f;
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-.button {
+.error-message {
+    color: #FF0000; /* Vermelho para mensagens de erro */
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    background-color: #008dcc; /* Azul claro */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul escuro */
+}
+
+a.button {
     display: inline-block;
     padding: 0.5rem 1rem;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     margin-right: 0.5rem;
+    background-color: #87457f; /* Roxo para botão de voltar */
 }
 
-.button.edit {
-    background-color: #0000FF;
-}
-
-.button.delete {
-    background-color: #FF0000; 
-}
-
-.button.new {
-    background-color: #87457f;
-    padding: 0.5rem 2rem;
-}
-
-.button:hover {
+a.button:hover {
     opacity: 0.9;
 }
 
 footer {
-    background: #008dcc;
+    background: #008dcc; /* Azul claro */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
@@ -216,4 +120,3 @@ footer {
     bottom: 0;
     width: 100%;
 }
-

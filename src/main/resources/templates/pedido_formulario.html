@@ -1,48 +1,65 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Cadastro de Pedido</title>
-<link rel="stylesheet" th:href="@{/css/estilo.css}">
+    <meta charset="UTF-8">
+    <title>Cadastro de Pedido</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
 </head>
 <body>
-	<h1>Cadastro de Pedido</h1>
-	<form th:action="@{/pedidos}" th:object="${pedido}" method="post">
-		<div>
-			<label>Cliente:</label> <select th:field="*{cliente}">
-				<option th:each="cliente : ${clientes}" th:value="${cliente}"
-					th:text="${cliente.nome}"></option>
-			</select>
-		</div>
-		<div>
-			<label>Descrição:</label> <input type="text" th:field="*{descricao}" />
-			<div th:if="${#fields.hasErrors('descricao')}"
-				th:errors="*{descricao}">Descrição é obrigatória</div>
-		</div>
-		<div>
-			<label>Quantidade:</label> <input type="number"
-				th:field="*{quantidade}" />
-		</div>
-		<div>
-			<label>Data de Criação:</label> <input type="date"
-				th:field="*{dataCriacao}" />
-		</div>
-		<div>
-			<label>Data de Entrega:</label> <input type="date"
-				th:field="*{dataEntrega}" />
-		</div>
-		<div>
-			<label>Status:</label> <select th:field="*{status}">
-				<option value="PENDENTE">Pendente</option>
-				<option value="EM_PRODUCAO">Em Produção</option>
-				<option value="FINALIZADO">Finalizado</option>
-				<option value="ENTREGUE">Entregue</option>
-			</select>
-		</div>
-		<div>
-			<button type="submit">Salvar</button>
-		</div>
-	</form>
-	<a href="/pedidos">Voltar</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pedidos">Pedidos</a></li>
+                <li><a href="/producao">Produção</a></li>
+                <li><a href="/relatorios">Relatórios</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="dashboard">
+            <h1>Cadastro de Pedido</h1>
+            <form th:action="@{/pedidos}" th:object="${pedido}" method="post" class="form">
+                <div class="form-group">
+                    <label>Cliente:</label>
+                    <select th:field="*{cliente}" class="form-control">
+                        <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nome}"></option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Descrição:</label>
+                    <input type="text" th:field="*{descricao}" class="form-control"/>
+                    <div th:if="${#fields.hasErrors('descricao')}" th:errors="*{descricao}" class="error-message">Descrição é obrigatória</div>
+                </div>
+                <div class="form-group">
+                    <label>Quantidade:</label>
+                    <input type="number" th:field="*{quantidade}" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Data de Criação:</label>
+                    <input type="date" th:field="*{dataCriacao}" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Data de Entrega:</label>
+                    <input type="date" th:field="*{dataEntrega}" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label>Status:</label>
+                    <select th:field="*{status}" class="form-control">
+                        <option value="PENDENTE">Pendente</option>
+                        <option value="EM_PRODUCAO">Em Produção</option>
+                        <option value="FINALIZADO">Finalizado</option>
+                        <option value="ENTREGUE">Entregue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button">Salvar</button>
+                </div>
+            </form>
+            <a class="button" href="/pedidos">Voltar</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Gestão. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
