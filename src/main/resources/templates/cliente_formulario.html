@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+    <link rel="stylesheet" href="/css/estilo.css">
 </head>
 <body>
     <header>
@@ -16,40 +16,40 @@
         </nav>
     </header>
     <main>
-        <div class="dashboard">
+        <section class="form-container">
             <h1>Cadastro de Cliente</h1>
             <form th:action="@{/clientes}" th:object="${cliente}" method="post">
-                <div>
-                    <label>Nome:</label>
-                    <input type="text" th:field="*{nome}" />
-                    <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}">Nome é obrigatório</div>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" th:field="*{nome}" placeholder="Digite o nome" />
+                    <div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="error-message">Nome é obrigatório</div>
                 </div>
-                <div>
-                    <label>CPF/CNPJ:</label>
-                    <input type="text" th:field="*{cpfCnpj}" />
-                    <div th:if="${#fields.hasErrors('cpfCnpj')}" th:errors="*{cpfCnpj}">CPF/CNPJ é obrigatório</div>
+                <div class="form-group">
+                    <label for="cpfCnpj">CPF/CNPJ:</label>
+                    <input type="text" id="cpfCnpj" th:field="*{cpfCnpj}" placeholder="Digite o CPF ou CNPJ" />
+                    <div th:if="${#fields.hasErrors('cpfCnpj')}" th:errors="*{cpfCnpj}" class="error-message">CPF/CNPJ é obrigatório</div>
                 </div>
-                <div>
-                    <label>Endereço:</label>
-                    <input type="text" th:field="*{endereco}" />
-                    <div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}">Endereço é obrigatório</div>
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" th:field="*{endereco}" placeholder="Digite o endereço" />
+                    <div th:if="${#fields.hasErrors('endereco')}" th:errors="*{endereco}" class="error-message">Endereço é obrigatório</div>
                 </div>
-                <div>
-                    <label>Telefone:</label>
-                    <input type="text" th:field="*{telefone}" />
-                    <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}">Telefone é obrigatório</div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" th:field="*{telefone}" placeholder="Digite o telefone" />
+                    <div th:if="${#fields.hasErrors('telefone')}" th:errors="*{telefone}" class="error-message">Telefone é obrigatório</div>
                 </div>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" th:field="*{email}" />
-                    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email é obrigatório</div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" th:field="*{email}" placeholder="Digite o email" />
+                    <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-message">Email é obrigatório</div>
                 </div>
-                <div>
-                    <button type="submit" class="button">Salvar</button>
+                <div class="form-group">
+                    <button type="submit" class="button save">Salvar</button>
                 </div>
             </form>
-            <a href="/clientes" class="button">Voltar</a>
-        </div>
+            <a href="/clientes" class="button back">Voltar</a>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Sistema de Gestão. Todos os direitos reservados.</p>

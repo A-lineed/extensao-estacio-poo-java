@@ -4,119 +4,599 @@
     box-sizing: border-box;
 }
 
+/* Estilos gerais do corpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
 }
 
+/* Estilos do cabeçalho */
 header {
-    background: #008dcc; /* Azul claro */
+    background: #003366; /* Azul escuro */
     color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    padding: 10px 0;
 }
 
-header nav ul {
-    list-style: none;
+nav ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li img.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366; /* Azul escuro */
+}
+
+/* Estilos dos cartões */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
 }
 
-header nav ul li {
-    margin: 0 1rem;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-main {
-    padding: 2rem;
-    text-align: center;
-}
-
-.dashboard h1 {
-    margin-bottom: 2rem;
-    color: #87457f; /* Roxo escuro */
-}
-
-.form {
-    max-width: 600px;
-    margin: 0 auto;
+.card {
     background: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-    text-align: left;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #333;
+.card h2 {
+    margin-bottom: 10px;
+    color: #7a4d9f; /* Lilás */
 }
 
-.form-control {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
+.card p {
+    margin-bottom: 20px;
+    color: #666;
 }
 
-.error-message {
-    color: #FF0000; /* Vermelho para mensagens de erro */
-    font-size: 0.875rem;
-    margin-top: 0.5rem;
-}
-
-button {
-    background-color: #008dcc; /* Azul claro */
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #0056b3; /* Azul escuro */
-}
-
-a.button {
+.button {
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     color: #fff;
-    text-decoration: none;
+    background: #6a0dad; /* Lilás */
     border-radius: 5px;
-    margin-right: 0.5rem;
-    background-color: #87457f; /* Roxo para botão de voltar */
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
-a.button:hover {
-    opacity: 0.9;
+.button:hover {
+    background: #5c00a1; /* Lilás escuro */
 }
 
+/* Estilos do rodapé */
 footer {
-    background: #008dcc; /* Azul claro */
+    background: #003366; /* Azul escuro */
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    position: absolute;
+    padding: 10px 0;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+
+
+
+/* Tela de clientes */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li img.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #0056b3; /* Azul escuro com efeito hover */
+    border-radius: 5px;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366; /* Azul escuro */
+}
+
+/* Estilos da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #f1f1f1;
+}
+
+th {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+}
+
+/* Estilos dos botões */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #6a0dad; /* Lilás */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #5c00a1; /* Lilás escuro */
+}
+
+.button.edit {
+    background: #007bff; /* Azul */
+}
+
+.button.edit:hover {
+    background: #0056b3; /* Azul escuro */
+}
+
+.button.delete {
+    background: #dc3545; /* Vermelho */
+}
+
+.button.delete:hover {
+    background: #c82333; /* Vermelho escuro */
+}
+
+.button.new {
+    display: block;
+    margin: 20px auto;
+    background: #28a745; /* Verde */
+}
+
+.button.new:hover {
+    background: #218838; /* Verde escuro */
+}
+
+/* Estilos do rodapé */
+footer {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+    
+    .button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Formulario cliente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #0056b3; /* Azul escuro com efeito hover */
+    border-radius: 5px;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366; /* Azul escuro */
+}
+
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: #aaa;
+}
+
+.error-message {
+    color: #dc3545; /* Vermelho */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #6a0dad; /* Lilás */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button.save {
+    background: #007bff; /* Azul */
+}
+
+.button.save:hover {
+    background: #0056b3; /* Azul escuro */
+}
+
+.button.back {
+    display: block;
+    margin-top: 20px;
+    background: #28a745; /* Verde */
+}
+
+.button.back:hover {
+    background: #218838; /* Verde escuro */
+}
+
+/* Estilos do rodapé */
+footer {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+    
+    .button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"], input[type="email"] {
+        font-size: 14px;
+    }
+}
+
+
+
+/* Pedido form */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #0056b3; /* Azul escuro com efeito hover */
+    border-radius: 5px;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #003366; /* Azul escuro */
+}
+
+/* Estilos do formulário */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: #aaa;
+}
+
+.error-message {
+    color: #dc3545; /* Vermelho */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #6a0dad; /* Lilás */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    text-align: center;
+    font-size: 16px;
+}
+
+.button.save {
+    background: #007bff; /* Azul */
+}
+
+.button.save:hover {
+    background: #0056b3; /* Azul escuro */
+}
+
+.button.back {
+    display: block;
+    margin-top: 20px;
+    background: #28a745; /* Verde */
+}
+
+.button.back:hover {
+    background: #218838; /* Verde escuro */
+}
+
+/* Estilos do rodapé */
+footer {
+    background: #003366; /* Azul escuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px;
+    }
+    
+    .button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    input[type="text"], input[type="email"] {
+        font-size: 14px;
+    }
+}
+
+
