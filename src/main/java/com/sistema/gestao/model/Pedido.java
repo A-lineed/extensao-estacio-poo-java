@@ -8,6 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Transient;
 
 @Entity
 public class Pedido {
@@ -15,10 +16,6 @@ public class Pedido {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	@ManyToOne
-	@JoinColumn(name = "cliente_id")
-	private Cliente cliente;
 
 	@NotEmpty(message = "Descrição é obrigatória")
 	private String descricao;
@@ -28,12 +25,19 @@ public class Pedido {
 	private Date dataEntrega;
 	private String status;
 
-	public Long getId() {
-		return id;
+	@ManyToOne
+	@JoinColumn(name = "cliente_id")
+	private Cliente cliente;
+
+	@Transient
+	private String clienteNome;
+
+	public String getClienteNome() {
+		return clienteNome;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setClienteNome(String clienteNome) {
+		this.clienteNome = clienteNome;
 	}
 
 	public Cliente getCliente() {
@@ -42,6 +46,17 @@ public class Pedido {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
+		if (cliente != null) {
+			this.clienteNome = cliente.getNome();
+		}
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 	public String getDescricao() {

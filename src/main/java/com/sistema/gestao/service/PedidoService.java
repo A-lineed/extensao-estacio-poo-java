@@ -28,4 +28,13 @@ public class PedidoService {
 	public void deletar(Long id) {
 		pedidoRepository.deleteById(id);
 	}
+
+	public List<Pedido> findBySearch(String search) {
+	
+		return null;
+	}
+
+	public List<Pedido> findByStatus(String status) {
+		return null;
+	}
 }
